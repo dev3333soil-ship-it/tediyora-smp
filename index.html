@@ -1,26 +1,143 @@
-<!doctype html>
+
+<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Tediyora SMP</title>
+<meta name="theme-color" content="#07110b">
+<title>Tediyora SMP | Official Server</title>
 <style>
-*{box-sizing:border-box}body{margin:0;background:#07110b;color:#effff2;font-family:Arial,sans-serif;text-align:center}header{padding:20px;border-bottom:1px solid #24452e}header b{color:#39e879;font-size:22px}.hero{padding:75px 18px 55px}h1{font-size:clamp(38px,9vw,68px);margin:18px 0;color:#39e879}p{color:#b6cbbb;line-height:1.7}.pill{color:#baf7ca;border:1px solid #285738;border-radius:30px;padding:8px 13px}.ipbox,.card{max-width:560px;margin:25px auto;padding:22px;border:1px solid #285738;border-radius:16px;background:#0d1b11}.ip{font-size:18px;font-weight:bold;overflow-wrap:anywhere}button{margin:12px 4px 0;padding:12px 18px;border:0;border-radius:9px;background:#39e879;color:#061109;font-weight:bold;font-size:15px}section{padding:28px 18px}.cards{display:flex;flex-wrap:wrap;gap:12px;justify-content:center}.cards .card{flex:1 1 220px;margin:0;max-width:300px}h2{color:#39e879}footer{padding:25px;color:#9ab0a0;border-top:1px solid #24452e;font-size:13px}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+ margin:0;background:#070d0a;color:#effff2;
+ font-family:Arial,sans-serif;text-align:center;line-height:1.6
+}
+header{padding:20px;border-bottom:1px solid #285738}
+header b{font-size:23px;color:#39e879}
+.hero{padding:65px 16px 45px}
+.pill{display:inline-block;border:1px solid #285738;
+ border-radius:25px;padding:7px 13px;color:#baf7ca}
+h1{font-size:clamp(38px,9vw,65px);line-height:1.1;color:#39e879}
+p{color:#b6cbbb}
+button{padding:12px 17px;border:0;border-radius:9px;
+ background:#39e879;color:#061109;font-weight:bold;
+ font-size:15px;cursor:pointer;margin:5px}
+button:hover{opacity:.85}
+.secondary{background:#173923;color:#d8ffe3}
+.box,.card{max-width:560px;margin:20px auto;padding:20px;
+ border:1px solid #285738;border-radius:16px;background:#0d1b11}
+.label{font-size:12px;color:#9ab0a0;letter-spacing:2px}
+.value{font-size:18px;font-weight:bold;overflow-wrap:anywhere}
+.row{display:flex;align-items:center;justify-content:space-between;
+ gap:8px;flex-wrap:wrap;margin-top:8px}
+hr{border:0;border-top:1px solid #285738;margin:17px 0}
+section{padding:25px 15px}
+h2{color:#39e879}
+.cards{display:flex;flex-wrap:wrap;gap:12px;justify-content:center}
+.cards .card{flex:1 1 220px;max-width:300px}
+.card p{margin-bottom:0}
+#msg{min-height:24px;color:#39e879}
+footer{padding:24px;border-top:1px solid #285738;color:#9ab0a0;font-size:13px}
+@media(max-width:450px){.row{justify-content:center}.value{font-size:16px}}
 </style>
 </head>
 <body>
+
 <header><b>⛏ TEDIYORA SMP</b></header>
+
 <main>
-<div class="hero"><span class="pill">YOUR NEXT SURVIVAL ADVENTURE</span><h1>WELCOME TO<br>TEDIYORA SMP</h1><p>Build your world. Team up with friends.<br>Make your own Minecraft story.</p><button onclick="document.getElementById('join').scrollIntoView({behavior:'smooth'})">JOIN THE SERVER ↓</button>
-<div class="ipbox" id="join"><p>MINECRAFT SERVER ADDRESS</p><div class="ip" id="ip">tediyorasmp.falixsvr.me</div><button onclick="copyIP()">COPY SERVER IP</button><p id="msg"></p></div></div>
-<section><h2>SERVER FEATURES</h2><div class="cards"><div class="card"><h2>🌲 Survival</h2><p>Gather resources, craft gear and build your base.</p></div><div class="card"><h2>🏡 Build Together</h2><p>Explore and create amazing builds with friends.</p></div><div class="card"><h2>⚔️ Adventure</h2><p>Make memories and write your own SMP story.</p></div></div></section>
-<section><h2>SERVER RULES</h2><div class="card"><p>01 — Respect every player.</p><p>02 — No hacks or unfair cheats.</p><p>03 — No spam or harassment.</p><p>04 — No griefing or stealing.</p><p>05 — Respect server staff.</p></div></section>
+<div class="hero">
+ <span class="pill">YOUR NEXT SURVIVAL ADVENTURE</span>
+ <h1>WELCOME TO<br>TEDIYORA SMP</h1>
+ <p>Build your world. Team up with friends.<br>
+ Make your own Minecraft story.</p>
+ <button onclick="document.getElementById('join').scrollIntoView({behavior:'smooth'})">
+ JOIN THE SERVER ↓
+ </button>
+
+ <div class="box" id="join">
+  <div class="label">MINECRAFT SERVER ADDRESS</div>
+  <div class="row">
+   <span class="value">tediyorasmp.falixsvr.me</span>
+   <button onclick="copyValue('tediyorasmp.falixsvr.me','IP')">COPY IP</button>
+  </div>
+  <hr>
+  <div class="label">SERVER PORT</div>
+  <div class="row">
+   <span class="value">20753</span>
+   <button onclick="copyValue('20753','PORT')">COPY PORT</button>
+  </div>
+  <p id="msg" aria-live="polite"></p>
+  <p>Enter the address and port in Minecraft.</p>
+ </div>
+</div>
+
+<section>
+ <h2>SERVER FEATURES</h2>
+ <div class="cards">
+  <div class="card">
+   <h2>🌲 Survival</h2>
+   <p>Collect resources, craft gear and build your base.</p>
+  </div>
+  <div class="card">
+   <h2>🏡 Build Together</h2>
+   <p>Explore and create amazing builds with friends.</p>
+  </div>
+  <div class="card">
+   <h2>⚔️ Adventure</h2>
+   <p>Make memories and write your own SMP story.</p>
+  </div>
+ </div>
+</section>
+
+<section>
+ <h2>SERVER RULES</h2>
+ <div class="card">
+  <p>01 — Respect every player.</p>
+  <p>02 — No hacks or unfair cheats.</p>
+  <p>03 — No spam or harassment.</p>
+  <p>04 — No griefing or stealing.</p>
+  <p>05 — Respect server staff.</p>
+ </div>
+</section>
+
+<section>
+ <div class="card">
+  <h2>READY TO JOIN?</h2>
+  <p>Copy the details and join Tediyora SMP!</p>
+  <button onclick="copyValue('tediyorasmp.falixsvr.me','IP')">COPY SERVER IP</button>
+  <button class="secondary" onclick="copyValue('20753','PORT')">COPY SERVER PORT</button>
+ </div>
+</section>
 </main>
-<footer>© <span id="year"></span> Tediyora SMP<br>Community website; not affiliated with Mojang or Microsoft.</footer>
+
+<footer>
+ © <span id="year"></span> Tediyora SMP 💚
+ <p>This is a fan-made community website, not an official Minecraft website.</p>
+</footer>
+
 <script>
-function copyIP(){const ip='tediyorasmp.falixsvr.me';if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(ip).then(()=>document.getElementById('msg').textContent='IP copied!').catch(()=>fallback(ip))}else fallback(ip)}
-function fallback(ip){const t=document.createElement('textarea');t.value=ip;document.body.appendChild(t);t.select();try{document.execCommand('copy');document.getElementById('msg').textContent='IP copied!'}catch(e){document.getElementById('msg').textContent=ip}t.remove()}
+async function copyValue(value,label){
+ const msg=document.getElementById('msg');
+ try{
+  if(!navigator.clipboard) throw new Error('Clipboard unavailable');
+  await navigator.clipboard.writeText(value);
+  msg.textContent='✓ '+label+' COPIED!';
+ }catch(e){
+  const input=document.createElement('textarea');
+  input.value=value;
+  input.style.position='fixed';
+  input.style.opacity='0';
+  document.body.appendChild(input);
+  input.select();
+  const ok=document.execCommand('copy');
+  input.remove();
+  msg.textContent=ok?'✓ '+label+' COPIED!':label+': '+value;
+ }
+}
 document.getElementById('year').textContent=new Date().getFullYear();
 </script>
+
 </body>
-                                                      </html>
+</html>
