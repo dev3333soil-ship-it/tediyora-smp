@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tediyora SMP</title>
+<style>
+*{box-sizing:border-box}body{margin:0;background:#07110b;color:#effff2;font-family:Arial,sans-serif;text-align:center}header{padding:20px;border-bottom:1px solid #24452e}header b{color:#39e879;font-size:22px}.hero{padding:75px 18px 55px}h1{font-size:clamp(38px,9vw,68px);margin:18px 0;color:#39e879}p{color:#b6cbbb;line-height:1.7}.pill{color:#baf7ca;border:1px solid #285738;border-radius:30px;padding:8px 13px}.ipbox,.card{max-width:560px;margin:25px auto;padding:22px;border:1px solid #285738;border-radius:16px;background:#0d1b11}.ip{font-size:18px;font-weight:bold;overflow-wrap:anywhere}button{margin:12px 4px 0;padding:12px 18px;border:0;border-radius:9px;background:#39e879;color:#061109;font-weight:bold;font-size:15px}section{padding:28px 18px}.cards{display:flex;flex-wrap:wrap;gap:12px;justify-content:center}.cards .card{flex:1 1 220px;margin:0;max-width:300px}h2{color:#39e879}footer{padding:25px;color:#9ab0a0;border-top:1px solid #24452e;font-size:13px}
+</style>
+</head>
+<body>
+<header><b>⛏ TEDIYORA SMP</b></header>
+<main>
+<div class="hero"><span class="pill">YOUR NEXT SURVIVAL ADVENTURE</span><h1>WELCOME TO<br>TEDIYORA SMP</h1><p>Build your world. Team up with friends.<br>Make your own Minecraft story.</p><button onclick="document.getElementById('join').scrollIntoView({behavior:'smooth'})">JOIN THE SERVER ↓</button>
+<div class="ipbox" id="join"><p>MINECRAFT SERVER ADDRESS</p><div class="ip" id="ip">tediyorasmp.falixsvr.me</div><button onclick="copyIP()">COPY SERVER IP</button><p id="msg"></p></div></div>
+<section><h2>SERVER FEATURES</h2><div class="cards"><div class="card"><h2>🌲 Survival</h2><p>Gather resources, craft gear and build your base.</p></div><div class="card"><h2>🏡 Build Together</h2><p>Explore and create amazing builds with friends.</p></div><div class="card"><h2>⚔️ Adventure</h2><p>Make memories and write your own SMP story.</p></div></div></section>
+<section><h2>SERVER RULES</h2><div class="card"><p>01 — Respect every player.</p><p>02 — No hacks or unfair cheats.</p><p>03 — No spam or harassment.</p><p>04 — No griefing or stealing.</p><p>05 — Respect server staff.</p></div></section>
+</main>
+<footer>© <span id="year"></span> Tediyora SMP<br>Community website; not affiliated with Mojang or Microsoft.</footer>
+<script>
+function copyIP(){const ip='tediyorasmp.falixsvr.me';if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(ip).then(()=>document.getElementById('msg').textContent='IP copied!').catch(()=>fallback(ip))}else fallback(ip)}
+function fallback(ip){const t=document.createElement('textarea');t.value=ip;document.body.appendChild(t);t.select();try{document.execCommand('copy');document.getElementById('msg').textContent='IP copied!'}catch(e){document.getElementById('msg').textContent=ip}t.remove()}
+document.getElementById('year').textContent=new Date().getFullYear();
+</script>
+</body>
+                                                      </html>
